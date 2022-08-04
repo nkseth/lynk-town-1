@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "app4",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
