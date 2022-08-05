@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Items = ({ item, index }) => {
   const { image, height, brand, name, price, id } = item;
@@ -8,34 +8,34 @@ const Items = ({ item, index }) => {
       style={{
         marginTop: `${
           index === 0
-            ? '0'
+            ? "0"
             : index === 1
-            ? '25px'
+            ? "25px"
             : index === 2
-            ? '-35px'
+            ? "-35px"
             : index === 3
-            ? '0'
-            : '20px'
+            ? "0"
+            : "20px"
         }`,
       }}
     >
-      <div className='mb-2'>
+      <div className="mb-2">
         <img
           src={image}
-          alt=''
+          alt=""
           style={{
             height: height,
           }}
           className={`w-full  object-cover`}
         />
       </div>
-      <div className='py-5 peer-hover:px-10 itemText transition-all'>
-        <h3 className='text-xs text-primaryColor'>{brand}</h3>
-        <h2 className='text-sm'>{name}</h2>
-        <div className='flex justify-between my-2 items-center pr-5'>
-          <h1 className='text-lg font-semibold  '>{price}</h1>
-          <button className='w-[80px] text-xs h-[30px] bg-primaryColor text-white rounded-[6px]'>
-            {' '}
+      <div className="py-5 peer-hover:px-10 itemText transition-all">
+        <h3 className="text-xs text-primaryColor">{brand}</h3>
+        <h2 className="text-sm">{name}</h2>
+        <div className="flex justify-between my-2 items-center pr-5">
+          <h1 className="text-lg font-semibold  ">{price}</h1>
+          <button className="w-[80px] text-xs h-[30px] bg-primaryColor text-white rounded-[6px]">
+            {" "}
             Buy Now
           </button>
         </div>
