@@ -7,20 +7,21 @@ import {
   ButtonNext,
   DotGroup,
 } from "pure-react-carousel";
-import { Button, IconButton, useMediaQuery } from "@mui/material";
+import { Alert, Button, IconButton, useMediaQuery } from "@mui/material";
 import Items from "./Items";
 import img1 from "/public/assets/images/collections/1.jpg";
 import img2 from "/public/assets/images/collections/2.jpg";
 import img3 from "/public/assets/images/collections/3.jpg";
 import img4 from "/public/assets/images/collections/4.jpg";
 import img5 from "/public/assets/images/collections/5.jpg";
+import axios from "axios";
 
 const carouselItems = [
   {
     id: 1,
     brand: "Allen solly",
     name: "Blue jean jacket",
-    price: "₹2000.00",
+    price: 2000,
     image: img1.src,
     height: "436.39px",
   },
@@ -28,7 +29,7 @@ const carouselItems = [
     id: 2,
     brand: "Allen solly",
     name: "Short yellow shirt",
-    price: "₹2000.00",
+    price: 2000,
     image: img2.src,
     height: "335px",
   },
@@ -36,7 +37,7 @@ const carouselItems = [
     id: 3,
     brand: "Allen solly",
     name: "Blue fur jacket",
-    price: "₹2000.00",
+    price: 2000,
     image: img3.src,
     height: "335px",
   },
@@ -44,7 +45,7 @@ const carouselItems = [
     id: 4,
     brand: "Allen solly",
     name: "white & black formals",
-    price: "₹2000.00",
+    price: 2000,
 
     image: img4.src,
     height: "436.39px",
@@ -53,11 +54,26 @@ const carouselItems = [
     id: 5,
     brand: "Allen solly",
     name: "Grey long dress",
-    price: "₹2000.00",
+    price: 2000,
     image: img5.src,
     height: "335px",
   },
 ];
+
+function loadScript(src) {
+  return new Promise(resolve => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.getElementById('__next').appendChild(script);
+  });
+}
+
 
 const SpecialCollection = () => {
   const match = useMediaQuery("(max-width:630px)");
@@ -65,6 +81,44 @@ const SpecialCollection = () => {
   const tab = useMediaQuery("(max-width:890px)");
   const mobile = useMediaQuery("(max-width:479px)");
   const large = useMediaQuery("(max-width:1430px)");
+
+  async function displayRazorpay(total) {
+    const res = await loadScript(
+      'https://checkout.razorpay.com/v1/checkout.js'
+    );
+
+    if (!res) {
+      alert('Razorpay SDK failed to load. Are you online?');
+      return;
+    }
+
+
+  
+
+    const  {data} = await axios.get(`https://us-central1-u2-lynk.cloudfunctions.net/createorderApi?total=${total}`).then((res)=>res).catch((err)=>{console.log(err)}) 
+
+    
+
+    const options = {
+      key: 'rzp_live_SlUwiRcpOMKIzd',
+      currency: data.currency,
+      amount: data.amount,
+      order_id: data.id,
+      name: 'U2Lynks',
+      description: 'Thank you for Shoping With Us',
+      handler: function (response) {
+       Alert("Thank you for Shoping With Us")
+      },
+     
+    };
+    debugger
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  }
+
+
+
+
   return (
     <div className=" lg:pt-10 xl:pt-20    relative overflow-hidden">
       <div className="container mx-auto">
@@ -122,7 +176,7 @@ const SpecialCollection = () => {
                     transform: "translateX(7%) translateX(7%)",
                   }}
                 >
-                  <Items item={item} index={index} />{" "}
+                  <Items item={item} index={index} displayRazorpay={displayRazorpay}/>{" "}
                 </Slide>
               );
             })}{" "}
