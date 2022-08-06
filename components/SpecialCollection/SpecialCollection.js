@@ -66,7 +66,7 @@ const SpecialCollection = () => {
   const mobile = useMediaQuery("(max-width:479px)");
   const large = useMediaQuery("(max-width:1430px)");
   return (
-    <div className="py-20 relative overflow-hidden">
+    <div className=" lg:pt-10 xl:pt-20    relative overflow-hidden">
       <div className="container mx-auto">
         <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-[40px] text-center md:text-left  text-primaryColor relative w-fit mx-auto md:mx-0">
           Our special collection{" "}

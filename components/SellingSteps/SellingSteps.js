@@ -172,7 +172,7 @@ const SellingSteps = () => {
                   >
                     <circle cx="237" cy="237" r="237" fill="#EEECE7" />
                   </svg>{" "}
-                  <div className="absolute top-2/4 left-2/4  h-[639px] w-[295px] -translate-x-2/4 -translate-y-2/4 ">
+                  <div className="absolute top-2/4 left-2/4  h-[600px] w-[300px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {" "}
                       {clicked[1] && !clicked[2] && (
@@ -197,7 +197,7 @@ const SellingSteps = () => {
                       )}{" "}
                     </AnimatePresence>{" "}
                   </div>{" "}
-                  <div className="absolute top-2/4 left-2/4  h-[639px] w-[295px] -translate-x-2/4 -translate-y-2/4 ">
+                  <div className="absolute top-2/4 left-2/4  h-[600px] w-[320px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {" "}
                       {clicked[2] && !clicked[3] && (
@@ -222,7 +222,7 @@ const SellingSteps = () => {
                       )}{" "}
                     </AnimatePresence>{" "}
                   </div>{" "}
-                  <div className="absolute top-2/4 left-2/4  h-[639px] w-[295px] -translate-x-2/4 -translate-y-2/4 ">
+                  <div className="absolute top-2/4 left-2/4  h-[600px] w-[320px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {" "}
                       {clicked[3] && !clicked[4] && (
@@ -247,7 +247,7 @@ const SellingSteps = () => {
                       )}{" "}
                     </AnimatePresence>{" "}
                   </div>{" "}
-                  <div className="absolute top-2/4 left-2/4  h-[639px] w-[295px] -translate-x-2/4 -translate-y-2/4 ">
+                  <div className="absolute top-2/4 left-2/4  h-[600px] w-[320px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {" "}
                       {clicked[4] && (

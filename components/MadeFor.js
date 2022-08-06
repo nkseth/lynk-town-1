@@ -7,7 +7,7 @@ import image5 from "/public/assets/images/madefor/5.png";
 import image6 from "/public/assets/images/madefor/6.png";
 const MadeFor = () => {
   return (
-    <section className="min-h-[70vh] sm:h-[80vh] md:h-full md:py-40 container mx-auto gap-10 flex flex-col md:flex-row md:justify-center items-center pb-56 pt-10 sm:py-20 md:pt-0">
+    <section className="min-h-[70vh] sm:h-[80vh] md:h md:py-40 container mx-auto gap-10 flex flex-col md:flex-row md:justify-center items-center pb-56 pt-10 sm:py-10 md:pt-0">
       <div className="relative flex-1 w-full h-full md:h-[794px] hidden md:block">
         <img
           src={image1.src}
@@ -85,17 +85,17 @@ const MadeFor = () => {
         <img
           src={image4.src}
           alt=""
-          className="hidden md:block absolute rounded-[7.78px] h-[156.76px] w-[157.38px] sm:w-[206.76px] sm:h-[250px] md:w-auto md:h-auto top-10 left-[2%] sm:left-[5%] sm:top-[-50px] md:left-[20%] md:top-40 object-cover"
+          className="hidden md:block absolute rounded-[7.78px] h-[156.76px] w-[157.38px] sm:w-[206.76px] sm:h-[250px] md:w-auto md:h-auto top-10 left-[2%] sm:left-[5%] sm:top-[-50px] md:left-[5%] md:top-40 object-cover"
         />
         <img
           src={image5.src}
           alt=""
-          className="absolute rounded-[12.78px] h-[100.08px] w-[100.32px]  sm:w-[150px] sm:h-[150px] md:w-auto md:h-auto   md:right-[0%] top-12 sm:right-0 sm:top-[-50px]  right-[10%]  md:top-72 z-10 object-cover"
+          className="absolute rounded-[12.78px] h-[100.08px] w-[100.32px]  sm:w-[150px] sm:h-[150px] md:w-auto md:h-auto   md:right-[0%] top-12 sm:right-0 sm:top-[-50px]  right-[5%]  md:top-72 z-20 object-cover"
         />
         <img
           src={image6.src}
           alt=""
-          className="absolute rounded-[15.78px]   h-[154.63px] w-[153.45px]  sm:w-[230px] sm:h-[250px] md:w-auto md:h-auto     bottom-[-150px]  z-10 sm:bottom-0  left-[40%] md:left-[5%] md:bottom-0 object-cover"
+          className="absolute rounded-[15.78px]   h-[154.63px] w-[153.45px]  sm:w-[230px] sm:h-[250px] md:w-auto md:h-auto bottom-[-150px]  z-10 sm:bottom-0  left-[40%] md:left-[5%] md:bottom-0 object-cover"
         />
       </div>{" "}
     </section>

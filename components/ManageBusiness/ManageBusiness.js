@@ -231,15 +231,11 @@ const ManageBusiness = () => {
                   >
                     <circle cx="237" cy="237" r="237" fill="#EEECE7" />
                   </svg>{" "}
-                  <div className="absolute top-2/4 left-2/4 h-[639px] w-[295px] -translate-x-2/4 -translate-y-2/4 ">
+                  <div className="absolute top-2/4 left-2/4 h-[600px] w-[320px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {" "}
                       {clicked[1] && !clicked[2] && (
                         <motion.img
-                          style={{
-                            height: "638px",
-                            width: "295px",
-                          }}
                           initial={{
                             opacity: 0,
                             scale: 0,
@@ -260,15 +256,11 @@ const ManageBusiness = () => {
                       )}{" "}
                     </AnimatePresence>{" "}
                   </div>{" "}
-                  <div className="absolute top-2/4 left-2/4  h-[639px] w-[295px] -translate-x-2/4 -translate-y-2/4 ">
+                  <div className="absolute top-2/4 left-2/4  h-[600px] w-[320px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {" "}
                       {clicked[2] && !clicked[3] && (
                         <motion.img
-                          style={{
-                            height: "638px",
-                            width: "295px",
-                          }}
                           initial={{
                             opacity: 0,
                             scale: 0,
@@ -289,7 +281,7 @@ const ManageBusiness = () => {
                       )}{" "}
                     </AnimatePresence>{" "}
                   </div>{" "}
-                  <div className="absolute top-2/4 left-2/4  h-[639px] w-[295px] -translate-x-2/4 -translate-y-2/4 ">
+                  <div className="absolute top-2/4 left-2/4  h-[600px] w-[320px] -translate-x-2/4 -translate-y-2/4 ">
                     <AnimatePresence>
                       {" "}
                       {clicked[3] && !clicked[4] && (

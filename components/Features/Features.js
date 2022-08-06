@@ -45,7 +45,7 @@ const Features = () => {
   const [currentTab, setCurrentTab] = React.useState("singleLink");
 
   return (
-    <section className="container mx-auto my-24    ">
+    <section className="container mx-auto pt-16 pb-0   ">
       <div className="w-full  pt-10  rounded-[38px] md:border-primaryColor  md:border-[3px]  ">
         <h1 className="text-2xl md:text-4xl lg:text-[40px] text-primaryColor text-center font-medium">
           Our intuitive features
@@ -137,7 +137,7 @@ const Features = () => {
           </Swiper>
         </header> */}
         {/* <div className='max-w-[80%] mx-auto'>{component}</div> */}
-        <div className="lg:max-w-[80%] px-4 mx-auto relative lg:h-[560px]  ">
+        <div className="lg:max-w-[80%] px-4 mx-auto relative lg:h-[560px]">
           <SingleLink currentTab={currentTab} />
           <Measurement currentTab={currentTab} />
           <Alteration currentTab={currentTab} />

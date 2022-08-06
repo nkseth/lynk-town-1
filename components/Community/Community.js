@@ -8,8 +8,8 @@ import { Instagram } from "../Hero/Icons";
 
 const Community = () => {
   return (
-    <section className="lg:min-h-screen  bg-[#EEECE7]  community_main z-20 py-10 ">
-      <div className=" grid md:grid-cols-[575px_575px] lg:grid-cols-[575px_575px] md:justify-center md:grid-rows-[300px_300px] lg:grid-rows-[409px_409px]  lg:container   mx-auto gap-4 lg:gap-10 lg:py-20 p-5">
+    <section className="lg:min-h  bg-[#EEECE7]  community_main z-20 pt-10 ">
+      <div className=" grid md:grid-cols-[575px_575px] lg:grid-cols-[575px_575px] md:justify-center md:grid-rows-[300px_300px] lg:grid-rows-[409px_409px]  lg:container   mx-auto gap-4 lg:gap-10 lg:py- p-5">
         <div
           className="h-[485.7px] md:h-full row-span-full bg-cover w-full  relative rounded-[24px]"
           style={{
